@@ -21,7 +21,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="hambuger">
+            <div class="cart2" (click)="showProductNav()">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="hambuger" (click)="showHamburgerMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
@@ -58,4 +61,16 @@
             </div>
         </div>
     </div>
+    <div class="mobile">
+        <div class="mobile-menu">
+            <ul class="hamburger-menu">
+                <li><h2>Menu</h2></li>
+                <li routerLink="/login">Login</li>
+                <li routerLink="/register">Register</li>
+                <li>Account</li>
+                <li><button class="close-menu-btn" (click)="closeHamburgerMenu()">Close</button></li>
+            </ul>
+        </div>
+    </div>
+    
 </div>
