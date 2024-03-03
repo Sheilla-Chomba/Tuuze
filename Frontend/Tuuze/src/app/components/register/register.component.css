@@ -21,7 +21,7 @@
     
 }
 .email-input,.password{
-    width: 100%;
+    width: 98%;
     border: none;
     box-shadow: 2px 2px 1px gray;
     padding-left: 2%;
@@ -30,7 +30,7 @@
 .login-btn{
     background-color: #BE97FE;
     cursor: pointer;
-    width: 102%;
+    width: 100%;
     border: none;
     box-shadow: 2px 2px 1px gray;
     border-radius: 5px;
