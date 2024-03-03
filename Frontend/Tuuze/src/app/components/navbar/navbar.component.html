@@ -15,7 +15,7 @@
                         <i class="fa-solid fa-user"></i>
                         Account
                     </li>
-                    <li>
+                    <li (click)="showProductNav()">
                         <i class="fa-solid fa-cart-shopping"></i>
                         Cart
                     </li>
@@ -26,4 +26,36 @@
             </div>
         </div>
     </nav>
+    <div class="prod-modal-bg-nav">
+        <div class="prod-modal">
+            <div class="mod-title">
+                <h2>Your Cart</h2>
+                <div class="close-icon" (click)="closeModalNav()">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+            </div>
+            <div class="mod-container">
+                <div class="modal-img">
+                    <img src="../../../assets/carousel 4.jpg" alt="" class="img-modal">
+                </div>
+                <div class="modal-text">
+                    <div class="mod-cont">
+                        <div class="modal-desc">
+                            <p>Navy Blue Plain Jeans at Ksh. 1000 only</p>
+                        </div>
+                        <div class="modal-plus">
+                            <i class="fa-solid fa-minus"></i>
+                            <p>2</p>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                                        
+                    </div>  
+                 </div>
+            </div>
+            <div class="mod-checkout">
+                <h2>Total: Ksh.1000</h2>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
 </div>
