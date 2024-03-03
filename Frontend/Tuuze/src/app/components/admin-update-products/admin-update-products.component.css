@@ -20,17 +20,20 @@
     justify-content: space-around;
     
 }
-.email-input,.password{
-    width: 100%;
+.email-input,.password,.password-cat{
+    width: 98%;
     border: none;
     box-shadow: 2px 2px 1px gray;
     padding-left: 2%;
     border-radius: 5px;
 }
+.password-cat{
+    width: 100%;
+}
 .login-btn{
     background-color: #BE97FE;
     cursor: pointer;
-    width: 102%;
+    width: 100%;
     border: none;
     box-shadow: 2px 2px 1px gray;
     border-radius: 5px;
