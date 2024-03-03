@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -10,6 +10,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
+
   showProductNav() {
     let modalBg = document.querySelector(
       '.prod-modal-bg-nav'
@@ -24,6 +25,7 @@ export class NavbarComponent {
 
     modalBg?.classList.remove('modal-active-nav');
   }
+
   showHamburgerMenu() {
     let hamburgerList = document.querySelector('.mobile') as HTMLElement;
 
