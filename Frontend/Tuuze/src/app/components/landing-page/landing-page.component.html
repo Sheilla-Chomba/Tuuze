@@ -69,7 +69,7 @@
             <h1>Our Products</h1>
         </div>
         <div class="products">
-            <div class="prod">
+            <div class="prod" (click)="showProduct()">
                 <div class="img-prod">
                     <img src="../../../assets/carousel 4.jpg" alt="" class="prod-img">
                     <div class="prod-text">
@@ -81,7 +81,7 @@
                     <p>Navy Blue Plain Jeans at Ksh. 1000 only</p>
                 </div>
             </div>
-            <div class="prod">
+            <div class="prod" (click)="showProduct()">
                 <div class="img-prod">
                     <img src="../../../assets/carousel 4.jpg" alt="" class="prod-img">
                     <div class="prod-text">
@@ -93,7 +93,7 @@
                     <p>Navy Blue Plain Jeans at Ksh. 1000 only</p>
                 </div>
             </div>
-            <div class="prod">
+            <div class="prod" (click)="showProduct()">
                 <div class="img-prod">
                     <img src="../../../assets/carousel 4.jpg" alt="" class="prod-img">
                     <div class="prod-text">
@@ -105,7 +105,7 @@
                     <p>Navy Blue Plain Jeans at Ksh. 1000 only</p>
                 </div>
             </div>
-            <div class="prod">
+            <div class="prod" (click)="showProduct()">
                 <div class="img-prod">
                     <img src="../../../assets/carousel 4.jpg" alt="" class="prod-img">
                     <div class="prod-text">
@@ -117,7 +117,7 @@
                     <p>Navy Blue Plain Jeans at Ksh. 1000 only</p>
                 </div>
             </div>
-            <div class="prod">
+            <div class="prod" (click)="showProduct()">
                 <div class="img-prod">
                     <img src="../../../assets/carousel 4.jpg" alt="" class="prod-img">
                     <div class="prod-text">
@@ -129,7 +129,7 @@
                     <p>Navy Blue Plain Jeans at Ksh. 1000 only</p>
                 </div>
             </div>
-            <div class="prod">
+            <div class="prod" (click)="showProduct()">
                 <div class="img-prod">
                     <img src="../../../assets/carousel 4.jpg" alt="" class="prod-img">
                     <div class="prod-text">
@@ -139,12 +139,40 @@
                 
                 <div class="prod-desc">
                     <p>Navy Blue Plain Jeans at Ksh. 1000 only</p>
+                </div>
+            </div>
+            <div class="prod-modal-bg">
+                <div class="prod-modal">
+                    <div class="modal-img">
+                        <img src="../../../assets/carousel 4.jpg" alt="" class="img-modal">
+                    </div>
+                    <div class="modal-text">
+                        <div class="close-icon" (click)="closeModal()">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                        </div>
+                        <div class="mod-cont">
+                            <div class="modal-desc">
+                                <p>Navy Blue Plain Jeans at Ksh. 1000 only</p>
+                            </div>
+                            <div class="modal-plus">
+                                <i class="fa-solid fa-minus"></i>
+                                <p>2</p>
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="modal-add-cart">
+                                <button class="cart-btn">ADD TO CART</button>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
     <div class="reviews-div">
-        
+
     </div>
 </div>
 
