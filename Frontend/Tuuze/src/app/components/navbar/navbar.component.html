@@ -1,76 +1,101 @@
 <div class="main">
-    <nav class="navbar">
-        <div class="nav-items">
-            <div class="logo">
-                <h1 routerLink="/">TUUZE</h1>
-            </div>
-            <div class="search">
-
-            </div>
-            <div class="menu">
-                <ul>
-                    <li routerLink="/login">Login</li>
-                    <li routerLink="/register">Register</li>
-                    <li>
-                        <i class="fa-solid fa-user"></i>
-                        Account
-                    </li>
-                    <li (click)="showProductNav()">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        Cart
-                    </li>
-                </ul>
-            </div>
-            <div class="cart2" (click)="showProductNav()">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>
-            <div class="hambuger" (click)="showHamburgerMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
-    </nav>
-    <div class="prod-modal-bg-nav">
-        <div class="prod-modal">
-            <div class="mod-title">
-                <h2>Your Cart</h2>
-                <div class="close-icon" (click)="closeModalNav()">
-                    <i class="fa-solid fa-circle-xmark"></i>
-                </div>
-            </div>
-            <div class="mod-container">
-                <div class="modal-img">
-                    <img src="../../../assets/carousel 4.jpg" alt="" class="img-modal">
-                </div>
-                <div class="modal-text">
-                    <div class="mod-cont">
-                        <div class="modal-desc">
-                            <p>Navy Blue Plain Jeans at Ksh. 1000 only</p>
-                        </div>
-                        <div class="modal-plus">
-                            <i class="fa-solid fa-minus"></i>
-                            <p>2</p>
-                            <i class="fa-solid fa-plus"></i>
-                        </div>
-                                        
-                    </div>  
-                 </div>
-            </div>
-            <div class="mod-checkout">
-                <h2>Total: Ksh.1000</h2>
-                <button class="checkout-btn">Checkout</button>
-            </div>
-        </div>
+  <nav class="navbar">
+    <div class="nav-items">
+      <div class="logo">
+        <h1 routerLink="/">TUUZE</h1>
+      </div>
+      <div class="search"></div>
+      <div class="menu">
+        <ul>
+          <li *ngIf="isNotLoggedIn && user && admin">Dashboard</li>
+          <li *ngIf="!admin">Dashboard</li>
+          <li *ngIf="!user">Dashboard</li>
+          <li *ngIf="isLoggedIn && admin && user" routerLink="/login">Login</li>
+          <li *ngIf="isLoggedIn && admin && user" routerLink="/register">
+            Register
+          </li>
+          <li *ngIf="isNotLoggedIn && user && admin">Settings</li>
+          <li *ngIf="!user">Settings</li>
+          <li *ngIf="!admin">Settings</li>
+          <li *ngIf="isNotLoggedIn && user && admin">Create Product</li>
+          <li *ngIf="!admin">Create Product</li>
+          <li *ngIf="!admin">View Users</li>
+          <li>
+            <i class="fa-solid fa-user"></i>
+            Account
+          </li>
+          <li (click)="showProductNav()" *ngIf="admin">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart
+          </li>
+        </ul>
+      </div>
+      <div class="cart2" (click)="showProductNav()" *ngIf="admin">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+      <div class="hambuger" (click)="showHamburgerMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </div>
-    <div class="mobile">
-        <div class="mobile-menu" >
-            <ul class="hamburger-menu">
-                <li><h2>Menu</h2></li>
-                <li routerLink="/login">Login</li>
-                <li routerLink="/register">Register</li>
-                <li>Account</li>
-                <li><button class="close-menu-btn" (click)="closeHamburgerMenu()">Close</button></li>
-            </ul>
+  </nav>
+  <div class="prod-modal-bg-nav">
+    <div class="prod-modal">
+      <div class="mod-title">
+        <h2>Your Cart</h2>
+        <div class="close-icon" (click)="closeModalNav()">
+          <i class="fa-solid fa-circle-xmark"></i>
         </div>
+      </div>
+      <div class="mod-container">
+        <div class="modal-img">
+          <img src="../../../assets/carousel 4.jpg" alt="" class="img-modal" />
+        </div>
+        <div class="modal-text">
+          <div class="mod-cont">
+            <div class="modal-desc">
+              <p>Navy Blue Plain Jeans at Ksh. 1000 only</p>
+            </div>
+            <div class="modal-plus">
+              <i class="fa-solid fa-minus"></i>
+              <p>2</p>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mod-checkout">
+        <h2>Total: Ksh.1000</h2>
+        <button class="checkout-btn">Checkout</button>
+      </div>
     </div>
-    
+  </div>
+  <div class="mobile">
+    <div class="mobile-menu">
+      <ul class="hamburger-menu">
+        <li><h2>Menu</h2></li>
+        <li *ngIf="isNotLoggedIn && user && admin">Dashboard</li>
+          <li *ngIf="!admin">Dashboard</li>
+          <li *ngIf="!user">Dashboard</li>
+          <li *ngIf="isLoggedIn && admin && user" routerLink="/login">Login</li>
+          <li *ngIf="isLoggedIn && admin && user" routerLink="/register">
+            Register
+          </li>
+          <li *ngIf="isNotLoggedIn && user && admin">Settings</li>
+          <li *ngIf="!user">Settings</li>
+          <li *ngIf="!admin">Settings</li>
+          <li *ngIf="isNotLoggedIn && user && admin">Create Product</li>
+          <li *ngIf="!admin">Create Product</li>
+          <li *ngIf="!admin">View Users</li>
+          <li>
+            <i class="fa-solid fa-user"></i>
+            Account
+          </li>
+        <li>
+          <button class="close-menu-btn" (click)="closeHamburgerMenu()">
+            Close
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
