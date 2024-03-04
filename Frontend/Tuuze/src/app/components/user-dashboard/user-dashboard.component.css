@@ -303,6 +303,11 @@
   color: #b819b0;
 }
 
+@media (max-width:960px) {
+  .caro1,.caro2{
+    width: 150%;
+  }
+}
 @media (max-width: 768px) {
   .landing-txt > h1 {
     font-size: 16px;
@@ -310,6 +315,9 @@
   .landing-txt {
     margin-right: 0%;
     margin-bottom: 0%;
+  }
+  .caro1,.caro2{
+    width:250%;
   }
   .prod {
     width: 30vw;
@@ -327,6 +335,9 @@
   }
 }
 @media (max-width: 425px) {
+  .caro1,.caro2{
+    width:1000%;
+  }
   .prod {
     width: 40vw;
   }
@@ -334,4 +345,5 @@
     height: 60%;
     width: 90%;
   }
+
 }
