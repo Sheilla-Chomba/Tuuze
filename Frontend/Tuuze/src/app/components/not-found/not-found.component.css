@@ -10,9 +10,20 @@ img{
     height: 100%;
     width: 100%;
     position: absolute;
-    object-fit: cover;
+    object-fit: fill;
 }
 .content{
     position: relative;
     color: #290A5C;
+    text-align: center;
+}
+.content>button{
+    background-color: #be97fe;
+    border: none;
+    width: 20vw;
+    cursor: pointer;
+}
+.content>button:hover{
+    background-color: #290A5C;
+    color: white;
 }

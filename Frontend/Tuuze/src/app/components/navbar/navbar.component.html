@@ -8,18 +8,18 @@
       <div class="menu">
         <ul>
           <li *ngIf="isNotLoggedIn && user && admin">Dashboard</li>
-          <li *ngIf="!admin">Dashboard</li>
-          <li *ngIf="!user">Dashboard</li>
+          <li *ngIf="!admin" routerLink="/admin">Dashboard</li>
+          <li *ngIf="!user" routerLink="/user">Dashboard</li>
           <li *ngIf="isLoggedIn && admin && user" routerLink="/login">Login</li>
           <li *ngIf="isLoggedIn && admin && user" routerLink="/register">
             Register
           </li>
           <li *ngIf="isNotLoggedIn && user && admin">Settings</li>
-          <li *ngIf="!user">Settings</li>
-          <li *ngIf="!admin">Settings</li>
+          <li *ngIf="!user" routerLink="/user/settings">Settings</li>
+          <li *ngIf="!admin" routerLink="/admin/settings">Settings</li>
           <li *ngIf="isNotLoggedIn && user && admin">Create Product</li>
-          <li *ngIf="!admin">Create Product</li>
-          <li *ngIf="!admin">View Users</li>
+          <li *ngIf="!admin" routerLink="/admin/create-products">Create Product</li>
+          <li *ngIf="!admin" routerLink="/admin/view-users">View Users</li>
           <li>
             <i class="fa-solid fa-user"></i>
             Account
@@ -74,18 +74,18 @@
       <ul class="hamburger-menu">
         <li><h2>Menu</h2></li>
         <li *ngIf="isNotLoggedIn && user && admin">Dashboard</li>
-          <li *ngIf="!admin">Dashboard</li>
-          <li *ngIf="!user">Dashboard</li>
+          <li *ngIf="!admin" routerLink="/admin">Dashboard</li>
+          <li *ngIf="!user" routerLink="/user">Dashboard</li>
           <li *ngIf="isLoggedIn && admin && user" routerLink="/login">Login</li>
           <li *ngIf="isLoggedIn && admin && user" routerLink="/register">
             Register
           </li>
           <li *ngIf="isNotLoggedIn && user && admin">Settings</li>
-          <li *ngIf="!user">Settings</li>
-          <li *ngIf="!admin">Settings</li>
+          <li *ngIf="!user" routerLink="/user/settings">Settings</li>
+          <li *ngIf="!admin" routerLink="/admin/settings">Settings</li>
           <li *ngIf="isNotLoggedIn && user && admin">Create Product</li>
-          <li *ngIf="!admin">Create Product</li>
-          <li *ngIf="!admin">View Users</li>
+          <li *ngIf="!admin" routerLink="/admin/create-products">Create Product</li>
+          <li *ngIf="!admin" routerLink="/admin/view-users">View Users</li>
           <li>
             <i class="fa-solid fa-user"></i>
             Account
